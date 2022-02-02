@@ -12,12 +12,13 @@ public class Ex09_소인수분해 {
 		System.out.print(num + " = ");
 
 		for (int i = 2; i <= num; i++) {
-			while (true) {
-				if(num % i == 0) {
-					System.out.print(i);
-					num /= i;	
-				} 
-			
+			while (num % i == 0) {
+				System.out.print(i);
+				num /= i;
+				if (num == 1) {
+					break;
+				}
+				System.out.print("*");
 			}
 		}
 	}
